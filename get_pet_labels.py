@@ -42,12 +42,9 @@ def get_pet_labels(image_dir):
     """
     # Replace None with the results_dic dictionary that you created with this
     # function
-    # Initialize an empty dictionary to store results
-    results_dic = {}  # Initialize an empty dictionary to store results
-
     # Retrieve the filenames from the specified image directory
     filename_list = listdir(image_dir)
-
+    results_dic = dict()
     # Process each filename
     for filename in filename_list:
         if not filename.startswith('.'):  # Exclude hidden files
@@ -57,3 +54,13 @@ def get_pet_labels(image_dir):
             results_dic[filename] = [pet_label]
 
     return results_dic
+
+def extract_pet_label(filename):
+    words = filename.split('_')
+    result = ""
+    for word in words:
+        if word.isalpha():
+            if len(result) > 0:
+                result += " "
+            result += word
+    return result.lower().strip()

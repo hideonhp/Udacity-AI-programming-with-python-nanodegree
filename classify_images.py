@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Bùi Đức Tiến
+# DATE CREATED: 30/03/2024                                 
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -65,4 +65,15 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
-    None 
+    for filename, labels in results_dic.items():
+        classifier_label = classifier(images_dir + filename, model)
+        classifier_label = classifier_label.lower().strip()
+        truth = labels[0]
+        #print(truth)
+    if truth in classifier_label:
+        results_dic[filename].extend([classifier_label, 1])
+        #print(truth)
+    else:
+        results_dic[filename].extend([classifier_label, 0])
+        #print(truth)
+
