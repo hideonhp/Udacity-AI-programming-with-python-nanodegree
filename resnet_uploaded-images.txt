@@ -77,4 +77,4 @@ Pet image: dog, Classifier label: pencil sharpener
 
 *** Misclassified Dog Breeds:
 
-** Total Elapsed Runtime: 0:0:4
+** Total Elapsed Runtime: 0:0:7

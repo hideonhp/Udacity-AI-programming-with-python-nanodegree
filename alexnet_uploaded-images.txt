@@ -77,4 +77,4 @@ Pet image: dog, Classifier label: soccer ball
 
 *** Misclassified Dog Breeds:
 
-** Total Elapsed Runtime: 0:0:1
+** Total Elapsed Runtime: 0:0:2
