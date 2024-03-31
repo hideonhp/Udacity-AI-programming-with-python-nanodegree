@@ -315,26 +315,21 @@ Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
-CNN Model Architecture: resnet
-
-
-*** Results Summary:
+Using the resnet CNN model architecture
 Number of Images: 40
 Number of Dog Images: 30
-Number of 'Not-a' Dog Images: 10
+Number of "Not-a" Images: 10
+100.0% Correct Dog
+90.0% Correct Breed
+90.0% Correct "Not-a" Dog
+82.5% Match
 
-*** Percentage Results:
-pct_match: 82.50%
-pct_correct_dogs: 100.00%
-pct_correct_breed: 90.00%
-pct_correct_notdogs: 90.00%
+*** Misclassified Dogs
+image: cat_01.jpg, classifier label: norwegian elkhound, elkhound
 
-*** Misclassified Dogs:
-Pet image: cat, Classifier label: norwegian elkhound, elkhound
+*** Misclassified Breed's of Dog
+image: Beagle_01170.jpg, classifier label: walker hound, walker foxhound
+image: Golden_retriever_05182.jpg, classifier label: leonberg
+image: Great_pyrenees_05367.jpg, classifier label: kuvasz
 
-*** Misclassified Dog Breeds:
-Pet image: beagle, Classifier label: walker hound, walker foxhound
-Pet image: golden retriever, Classifier label: leonberg
-Pet image: great pyrenees, Classifier label: kuvasz
-
-** Total Elapsed Runtime: 0:1:4
+** Total Elapsed Runtime: 0:0:51

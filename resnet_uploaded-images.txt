@@ -57,24 +57,19 @@ Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
  ** Check Statistics - calculated from this function as a check:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
 Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
-CNN Model Architecture: resnet
-
-
-*** Results Summary:
+Using the resnet CNN model architecture
 Number of Images: 4
 Number of Dog Images: 2
-Number of 'Not-a' Dog Images: 2
+Number of "Not-a" Images: 2
+0.0% Correct Dog
+0.0% Correct Breed
+100.0% Correct "Not-a" Dog
+0.0% Match
 
-*** Percentage Results:
-pct_match: 0.00%
-pct_correct_dogs: 0.00%
-pct_correct_breed: 0.00%
-pct_correct_notdogs: 100.00%
+*** Misclassified Dogs
+image: Dog_01.jpg, classifier label: pencil sharpener
+image: Dog_02.jpg, classifier label: pencil sharpener
 
-*** Misclassified Dogs:
-Pet image: dog, Classifier label: pencil sharpener
-Pet image: dog, Classifier label: pencil sharpener
+*** Misclassified Breed's of Dog
 
-*** Misclassified Dog Breeds:
-
-** Total Elapsed Runtime: 0:0:7
+** Total Elapsed Runtime: 0:0:5
