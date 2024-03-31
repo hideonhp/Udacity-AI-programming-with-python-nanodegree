@@ -315,10 +315,15 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
-Using the vgg CNN model architecture
+CNN Model Architecture: vgg
+
+
+*** Results Summary:
 Number of Images: 40
 Number of Dog Images: 30
 Number of "Not-a" Images: 10
+
+*** Percentage Results:
 100.0% Correct Dog
 93.33333333333333% Correct Breed
 100.0% Correct "Not-a" Dog
@@ -330,4 +335,4 @@ Number of "Not-a" Images: 10
 image: Beagle_01170.jpg, classifier label: walker hound, walker foxhound
 image: Great_pyrenees_05367.jpg, classifier label: kuvasz
 
-** Total Elapsed Runtime: 0:1:35
+** Total Elapsed Runtime: 0:1:39

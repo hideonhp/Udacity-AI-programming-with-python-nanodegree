@@ -315,10 +315,15 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
-Using the alexnet CNN model architecture
+CNN Model Architecture: alexnet
+
+
+*** Results Summary:
 Number of Images: 40
 Number of Dog Images: 30
 Number of "Not-a" Images: 10
+
+*** Percentage Results:
 100.0% Correct Dog
 80.0% Correct Breed
 100.0% Correct "Not-a" Dog
@@ -334,4 +339,4 @@ image: Golden_retriever_05257.jpg, classifier label: afghan hound, afghan
 image: Boston_terrier_02285.jpg, classifier label: basenji
 image: Great_pyrenees_05367.jpg, classifier label: kuvasz
 
-** Total Elapsed Runtime: 0:0:17
+** Total Elapsed Runtime: 0:0:21

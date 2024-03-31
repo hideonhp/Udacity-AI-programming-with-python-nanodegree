@@ -315,10 +315,15 @@ Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
-Using the resnet CNN model architecture
+CNN Model Architecture: resnet
+
+
+*** Results Summary:
 Number of Images: 40
 Number of Dog Images: 30
 Number of "Not-a" Images: 10
+
+*** Percentage Results:
 100.0% Correct Dog
 90.0% Correct Breed
 90.0% Correct "Not-a" Dog
@@ -332,4 +337,4 @@ image: Beagle_01170.jpg, classifier label: walker hound, walker foxhound
 image: Golden_retriever_05182.jpg, classifier label: leonberg
 image: Great_pyrenees_05367.jpg, classifier label: kuvasz
 
-** Total Elapsed Runtime: 0:0:51
+** Total Elapsed Runtime: 0:1:27

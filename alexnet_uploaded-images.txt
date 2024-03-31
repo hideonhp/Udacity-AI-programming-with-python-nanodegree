@@ -6,9 +6,9 @@ Command Line Arguments:
 Pet Image Label Dictionary has 4 key-value pairs.
 Below are 4 of them:
  1 key:                     Cat_01.jpg  label:                        cat
- 2 key:                     Dog_01.jpg  label:                        dog
- 3 key:                     Dog_02.jpg  label:                        dog
- 4 key:                   House_01.jpg  label:                      house
+ 2 key:                     Dog_02.png  label:                        dog
+ 3 key:                   House_01.jpg  label:                      house
+ 4 key:                     Dog_01.png  label:                        dog
 
      MATCH:
 
@@ -17,14 +17,14 @@ Below are 4 of them:
                     Cat_01.jpg: 
 Real:                        cat   Classifier: binoculars, field glasses, opera glasses
 
-                    Dog_01.jpg: 
-Real:                        dog   Classifier:                    soccer ball
-
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:                    soccer ball
+                    Dog_02.png: 
+Real:                        dog   Classifier:                      chihuahua
 
                   House_01.jpg: 
 Real:                      house   Classifier:           picket fence, paling
+
+                    Dog_01.png: 
+Real:                        dog   Classifier:                         collie
 
 # Total Images 4 # Matches: 0 # NOT Matches: 4
 
@@ -36,40 +36,45 @@ Real:                      house   Classifier:           picket fence, paling
 Real:                        cat   Classifier: binoculars, field glasses, opera glasses  
 PetLabelDog: 0  ClassLabelDog: 0
 
-                    Dog_01.jpg: 
-Real:                        dog   Classifier:                    soccer ball  
-PetLabelDog: 1  ClassLabelDog: 0
-
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:                    soccer ball  
-PetLabelDog: 1  ClassLabelDog: 0
+                    Dog_02.png: 
+Real:                        dog   Classifier:                      chihuahua  
+PetLabelDog: 1  ClassLabelDog: 1
 
                   House_01.jpg: 
 Real:                      house   Classifier:           picket fence, paling  
 PetLabelDog: 0  ClassLabelDog: 0
 
+                    Dog_01.png: 
+Real:                        dog   Classifier:                         collie  
+PetLabelDog: 1  ClassLabelDog: 1
+
 # Total Images 4 # Matches: 0 # NOT Matches: 4
 
  ** Statistics from calculates_results_stats() function:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
-Using the alexnet CNN model architecture
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+CNN Model Architecture: alexnet
+
+
+*** Results Summary:
 Number of Images: 4
 Number of Dog Images: 2
 Number of "Not-a" Images: 2
-0.0% Correct Dog
+
+*** Percentage Results:
+100.0% Correct Dog
 0.0% Correct Breed
 100.0% Correct "Not-a" Dog
 0.0% Match
 
 *** Misclassified Dogs
-image: Dog_01.jpg, classifier label: soccer ball
-image: Dog_02.jpg, classifier label: soccer ball
 
 *** Misclassified Breed's of Dog
+image: Dog_02.png, classifier label: chihuahua
+image: Dog_01.png, classifier label: collie
 
-** Total Elapsed Runtime: 0:0:1
+** Total Elapsed Runtime: 0:0:2

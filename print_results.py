@@ -74,11 +74,6 @@ def print_results(results_dic, results_stats_dic, model,
     print("{}% Correct Breed".format(results_stats_dic["pct_correct_breed"]))
     print("{}% Correct \"Not-a\" Dog".format(results_stats_dic["pct_correct_notdogs"]))
     print("{}% Match".format(results_stats_dic["pct_match"]))
-
-#     print("\n*** Percentage Results:")
-#     for key, value in results_stats_dic.items():
-#         if key.startswith('pct'):
-#             print("{}: {:.2f}%".format(key, value))
             
     if print_incorrect_dogs:
         print("\n*** Misclassified Dogs")
