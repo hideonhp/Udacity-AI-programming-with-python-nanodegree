@@ -69,20 +69,19 @@ def print_results(results_dic, results_stats_dic, model,
     print("Number of Dog Images: {}".format(results_stats_dic["n_dogs_img"]))
     print("Number of \"Not-a\" Images: {}".format(results_stats_dic["n_notdogs_img"]))
           
-    print("\n*** Percentage Results:")      
-    print("{}% Correct Dog".format(results_stats_dic["pct_correct_dogs"]))
-    print("{}% Correct Breed".format(results_stats_dic["pct_correct_breed"]))
-    print("{}% Correct \"Not-a\" Dog".format(results_stats_dic["pct_correct_notdogs"]))
-    print("{}% Match".format(results_stats_dic["pct_match"]))
-            
+    print("\n*** Percentage Results:")
+    for key, value in results_stats_dic.items():
+        if key.startswith('pct'):
+            print("{}: {:.2f}%".format(key, value))
+
     if print_incorrect_dogs:
-        print("\n*** Misclassified Dogs")
-        for image, values in results_dic.items():
-            if (int(values[3]) + int(values[4])) == 1:
-                print("image: {}, classifier label: {}".format(image, values[1]))
-                      
+        print("\n*** Misclassified Dogs:")
+        for filename, labels in results_dic.items():
+            if labels[3] == 0 and labels[4] == 1:  # Check if labels disagree on whether image is a dog
+                print("Pet image: {}, Classifier label: {}".format(labels[0], labels[1]))
+
     if print_incorrect_breed:
-        print("\n*** Misclassified Breed's of Dog")
-        for image, values in results_dic.items():
-            if (int(values[3]) + int(values[4])) == 2 and values[2] == 0:
-                print("image: {}, classifier label: {}".format(image, values[1]))              
+        print("\n*** Misclassified Dog Breeds:")
+        for filename, labels in results_dic.items():
+            if labels[2] == 0 and labels[3] == 1 and labels[4] == 1:  # Check if labels agree that it's a dog but disagree on breed
+                print("Pet image: {}, Classifier label: {}".format(labels[0], labels[1]))
