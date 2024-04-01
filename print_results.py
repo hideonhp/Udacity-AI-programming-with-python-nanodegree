@@ -75,13 +75,16 @@ def print_results(results_dic, results_stats_dic, model,
     print("Number of {}% Correct \"Not-a\" Dog".format(results_stats_dic["pct_correct_notdogs"]))
     print("Number of {}% Match".format(results_stats_dic["pct_match"]))
             
-    if print_incorrect_dogs:
+    if (print_incorrect_dogs and ((results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images'])):
+        print("\nINCORRECT Dog/Not Dog Assignment:")
         print("\n*** Misclassified Dogs:")
         for filename, labels in results_dic.items():
-            if (labels[3] + labels[4]) == 1:
+            if (int(labels[3]) + int(labels[4])) == 1:
                 print("Pet image: {}, classifier label: {}".format(filename, labels[1]))
                 
-    if print_incorrect_breed:
+    if (print_incorrect_breed and 
+    (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed'])):
+        print("\nINCORRECT Dog Breed Assignment:")
         print("\n*** Misclassified Dog Breeds:")
         for filename, labels in results_dic.items():
             if (labels[3] + labels[4]) == 2 and labels[2] == 0:
